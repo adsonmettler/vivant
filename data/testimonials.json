@@ -1,0 +1,26 @@
+{
+    "testimonials": [
+      {
+        "name": "John Li Wei",
+        "year_of_degree": "2nd year Mathematics",
+        "university": "University of Alberta",
+        "testimonial_note": "UponRock connected me with an amazing mentor who guided me through my career journey in environmental engineering. I had so many doubts about my next steps, but my mentor's insights gave me the confidence I needed. The platform is easy to use, and the connection was smooth and supportive.",
+        "image_url": "images/testimonials-uponrock-2.webp"
+      },
+      {
+        "name": "Emily Harris",
+        "year_of_degree": "3rd year Computer Science",
+        "university": "Mount Royal University",
+        "testimonial_note": "Thanks to UponRock, I found a mentor who helped me navigate my post-graduation job search in the wildlife conservation field. I felt reassured knowing I had someone experienced to guide me, and it made the transition into my career much easier.",
+        "image_url": "images/testimonials-uponrock-1.webp"
+      },
+      {
+        "name": "Julie Bennett",
+        "year_of_degree": "3rd year Financial Management",
+        "university": "University of Calgary",
+        "testimonial_note": "As a student entering the outdoor sports industry, UponRock was invaluable in finding someone to give me practical advice on building my career. The mentor I connected with gave me a clearer path and even helped me grow my network in ways I never expected.",
+        "image_url": "images/testimonials-uponrock-3.webp"
+      }
+    ]
+  }
+  
