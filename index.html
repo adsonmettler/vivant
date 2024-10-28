@@ -59,7 +59,7 @@
         <div class="hero-container">
             <div class="hero">
                 <div class="hero-text">
-                    <h1>Unique<br> <span class="animated-text" id="dynamic-text"></span></h1>
+                    <h1>Wear<br> <span class="animated-text" id="dynamic-text"></span></h1>
                     <p>The Everyday Essential for Healthcare Professionals</p>
                     <a href="https://adsonmettler.github.io/wdd231/project/mentors.html" class="hero-btn">Shop now</a>
                 </div>
@@ -79,17 +79,19 @@
     </div>
     <div class="best">
         <div class="product-card">
-            <img src="images/vivant-black.jpg" alt="Black shoes" class="product-image" loading="lazy">
-            <h3>Vivant Black Shoes</h3>
-            <p>Stylish black shoes perfect for any occasion.</p>
+            <div class="image-container">
+                <img src="images/vivant-female-white.png" alt="Female shoes" class="product-image" loading="lazy">
+            </div>
+            <h3>Vivant Shoes<br> for Woman</h3>
+            <p>Stylish shoes perfect for any occasion.</p>
             <div class="color-select">
-                <label for="color-black">Color:</label>
-                <button id="color-black" class="color-button" onclick="changeColor('images/vivant-3jpg', this)">Black</button>
-                <button id="color-white" class="color-button" onclick="changeColor('images/vivant-white.jpg', this)">White</button>
+                <label for="color-female">Color:</label>
+                <button id="color-black-female" class="color-button" onclick="changeColor('images/vivant-female-black.png', this)"></button>
+                <button id="color-white-female" class="color-button" onclick="changeColor('images/vivant-female-white.png', this)"></button>
             </div>
             <div class="size-select">
-                <label for="size-black">Size:</label>
-                <select id="size-black">
+                <label for="size-female">Size:</label>
+                <select id="size-female">
                     <option value="8">8</option>
                     <option value="9">9</option>
                     <option value="10">10</option>
@@ -100,17 +102,19 @@
         </div>
 
         <div class="product-card">
-            <img src="images/vivant-white.jpg" alt="White shoes" class="product-image" loading="lazy">
-            <h3>Vivant White Shoes</h3>
-            <p>Stylish white shoes that fit every style.</p>
+            <div class="image-container">
+                <img src="images/vivant-male.jpg" alt="Male shoes" class="product-image" loading="lazy">
+            </div>
+            <h3>Vivant Shoes<br> for Man</h3>
+            <p>Stylish shoes that fit every style.</p>
             <div class="color-select">
-                <label for="color-black">Color:</label>
-                <button id="color-black-white" class="color-button" onclick="changeColor('images/vivant-black.jpg', this)">Black</button>
-                <button id="color-white" class="color-button" onclick="changeColor('images/vivant-white.jpg', this)">White</button>
+                <label for="color-male">Color:</label>
+                <button id="color-black-male" class="color-button" onclick="changeColor('images/vivant-black.jpg', this)"></button>
+                <button id="color-white-male" class="color-button" onclick="changeColor('images/vivant-white.jpg', this)"></button>
             </div>
             <div class="size-select">
-                <label for="size-white">Size:</label>
-                <select id="size-white">
+                <label for="size-male">Size:</label>
+                <select id="size-male">
                     <option value="8">8</option>
                     <option value="9">9</option>
                     <option value="10">10</option>
@@ -121,6 +125,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 
@@ -199,7 +205,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-logo">
-                    <a href=""><img src="images/uponrock-logo-white.svg" alt="logomarca Adson" width="50" loading="lazy"></a>
+                    <a href=""><img src="images/vivant-logo-white.svg" alt="logomarca Adson" width="50" loading="lazy"></a>
                 </div>
                 <p id="year">&copy; <span class="highlight">YYYY</span> Adson Mettler do Nascimento | Web Designer</p>
             </div>

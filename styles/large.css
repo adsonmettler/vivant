@@ -216,8 +216,7 @@ h1 {
 
 
 
-
-
+/* BEST SELLERS SECTION */
 
 
 .best {
@@ -225,37 +224,86 @@ h1 {
     flex-wrap: wrap; /* Allow cards to wrap into a new line */
     justify-content: space-between; /* Distribute space between items */
     padding: 2em 12em;
-    color: #333;
+    color: var(--secondary-color);
+}
+
+.best-title-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the title */
+    width: 100%; /* Full width */
+    margin: 0; /* Reset margin */
 }
 
 .product-card {
     background-color: white; /* Background color for card */
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-    padding: 1.5em; /* Padding inside card */
+    padding: 0; /* Remove padding to allow image to fill */
     margin: 1em; /* Margin between cards */
-    width: calc(50% - 2em); /* Adjust width for two columns */
+    width: calc(50% - 6em); /* Adjust width for two columns */
     text-align: center; /* Center align text */
+    overflow: hidden; /* Prevent overflow */
+    height: 800px;
+}
+
+.image-container {
+    height: 50%; /* Adjust the height to fill the top half of the card */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Positioning context for the image */
 }
 
 .product-image {
-    max-width: 100%; /* Ensure image fits within card */
-    height: auto;
-    border-radius: 10px;
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Ensure the image covers the container */
+    transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
+    cursor: pointer;
 }
 
-.color-button {
+.product-card:hover .product-image {
+    transform: scale(1.05); /* Zoom in effect on hover */
+}
+
+h3 {
+    margin: 1em 0 0; /* Margin adjustments to create space below image */
+}
+
+
+
+.size-select {
+    margin: .5em 2em;
+}
+
+
+.color-select {
+    margin: .5em 2em;
+}
+
+.color-select label, .size-select label {
+    color: black;
+    margin: 0 0 1em 0;
+}
+
+#color-black-female,
+#color-black-male {
     margin: 0 5px; /* Space between color buttons */
-    padding: 0.5em 1em; /* Padding for buttons */
+    padding: 1em 1em;
     border: none; /* No border */
+    border-radius: 999999px;
     background-color: var(--accent2-color); /* Use your accent color */
     color: white; /* Button text color */
-    cursor: pointer; /* Change cursor on hover */
+    cursor: pointer;
 }
 
-.size-select,
-.color-select {
-    margin: 1em 0; /* Space between select and buttons */
+#color-white-female,
+#color-white-male {
+    margin: 0 5px; /* Space between color buttons */
+    padding: 1em 1em;
+    border: 1px solid black;
+    border-radius: 999999px;
+    background-color: var(--accent1-color);
+    color: white;
+    cursor: pointer;
 }
 
 .price {
@@ -265,18 +313,28 @@ h1 {
 }
 
 .shop-now-button {
-    background-color: var(--accent2-color); /* Use your accent color */
+    background-color: var(--secondary-color); /* Use your accent color */
     color: white; /* Button text color */
     padding: 0.75em 1.5em; /* Button padding */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Change cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: color 0.3s; /* Smooth transition */
 }
 
 .shop-now-button:hover {
-    background-color: darken(var(--accent2-color), 10%); /* Darker on hover */
+    background-color: var(--secondary-color);
+    color: black;
 }
+
+h2.best-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent2-color);
+    text-align: center; /* Center text */
+}
+
+
 
 
 
