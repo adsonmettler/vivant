@@ -14,15 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 const card = document.createElement("div");
                 card.className = "card";
 
+                // Create a unique ID for each product to use later
+                const productId = product.name.replace(/\s+/g, '-').toLowerCase();
+
+                // Construct the HTML for the product card
                 card.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <img src="${product.colors[0].image}" alt="${product.name}" class="product-image" id="${productId}-image">
                     <h2 class="product-name">${product.name}</h2>
-                    <p class="product-role">${product.job_role}</p>
-                    <p class="product-company"><strong>At ${product.company}</strong></p>
-                    <p class="product-field"><strong>Field:</strong> ${product.professional_field}</p>
-                    <p class="product-university"><strong>University:</strong> ${product.university}</p>
-                    <p class="product-location"><strong>Location:</strong> ${product.location}</p>
-                    <button class="cta-button">Write a Message</button>
+                    <p class="product-price">${product.price}</p>
+                    <p class="product-description">${product.description}</p>
+                    <label for="${productId}-size">Size:</label>
+                    <select id="${productId}-size">
+                        ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
+                    </select>
+                    <label for="${productId}-color">Color:</label>
+                    <select id="${productId}-color" onchange="updateShoeImage('${productId}')">
+                        ${product.colors.map(color => `<option value="${color.color}">${color.color}</option>`).join('')}
+                    </select>
+                    <button class="cta-button">Add to bag</button>
                 `;
 
                 // Add click event to the "Write a Message" button
@@ -42,7 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Modal handling
+    // Function to update shoe image based on selected color
+    window.updateShoeImage = function(productId) {
+        const product = products.find(p => p.name.replace(/\s+/g, '-').toLowerCase() === productId);
+        const selectedColor = document.getElementById(`${productId}-color`).value;
+        const colorInfo = product.colors.find(c => c.color === selectedColor);
+        const shoeImageElement = document.getElementById(`${productId}-image`);
+
+        if (colorInfo) {
+            shoeImageElement.src = colorInfo.image; // Change the image source
+        }
+    };
+
+    // Modal handling (same as before)
     const modal = document.getElementById("messageModal");
     const thankYouModal = document.getElementById("thankYouModal");
     const closeButton = document.querySelector(".close-button");
@@ -74,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Handle form submission
+    // Handle form submission (same as before)
     const sendButton = document.getElementById("sendApplication");
     sendButton.addEventListener("click", () => {
         const fullName = document.getElementById("fullName").value;
@@ -103,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Observer setup for scroll animations
+    // Observer setup for scroll animations (same as before)
     function observeProductCards() {
         const cards = document.querySelectorAll(".card");
 

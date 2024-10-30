@@ -1,56 +1,98 @@
 [
-  {
-      "image": "images/vivant-female-black.png",
-      "name": "John Smith",
-      "job_role": "Software Engineer",
-      "company": "Google",
-      "professional_field": "Technology",
-      "university": "Stanford University",
-      "location": "Mountain View, CA"
-  },
-  {
-      "image": "images/vivant-3.jpg",
-      "name": "Alice Johnson",
-      "job_role": "Data Scientist",
-      "company": "Facebook",
-      "professional_field": "Data Science",
-      "university": "MIT",
-      "location": "Menlo Park, CA"
-  },
-  {
-      "image": "images/vivant-2.jpg",
-      "name": "Gwen Lee",
-      "job_role": "Product Manager",
-      "company": "Amazon",
-      "professional_field": "E-commerce",
-      "university": "Harvard University",
-      "location": "Seattle, WA"
-  },
-  {
-      "image": "images/vivant-female-white.png",
-      "name": "Emma Brown",
-      "job_role": "UX Designer",
-      "company": "Microsoft",
-      "professional_field": "Design",
-      "university": "University of Toronto",
-      "location": "Toronto, ON"
-  },
-  {
-      "image": "images/mentor5.webp",
-      "name": "James Wilson",
-      "job_role": "Cloud Architect",
-      "company": "IBM",
-      "professional_field": "Cloud Computing",
-      "university": "University of California, Berkeley",
-      "location": "Armonk, NY"
-  },
-  {
-      "image": "images/mentor6.webp",
-      "name": "Linda Martinez",
-      "job_role": "Cybersecurity Specialist",
-      "company": "Cisco",
-      "professional_field": "Cybersecurity",
-      "university": "Carnegie Mellon University",
-      "location": "San Jose, CA"
-  }
+    {
+        "name": "Classic Black Shoes",
+        "price": "$79.99",
+        "description": "Stylish black shoes perfect for any occasion.",
+        "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
+        "colors": [
+            {
+                "color": "Black",
+                "image": "images/shoes-black.png"
+            },
+            {
+                "color": "White",
+                "image": "images/shoes-white.png"
+            },
+            {
+                "color": "Red",
+                "image": "images/shoes-red.png"
+            },
+            {
+                "color": "Blue",
+                "image": "images/shoes-blue.png"
+            }
+        ]
+    },
+    {
+        "name": "Sleek White Sneakers",
+        "price": "$69.99",
+        "description": "Comfortable white sneakers for everyday wear.",
+        "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
+        "colors": [
+            {
+                "color": "Black",
+                "image": "images/shoes-black.png"
+            },
+            {
+                "color": "White",
+                "image": "images/shoes-white.png"
+            },
+            {
+                "color": "Red",
+                "image": "images/shoes-red.png"
+            },
+            {
+                "color": "Blue",
+                "image": "images/shoes-blue.png"
+            }
+        ]
+    },
+    {
+        "name": "Vibrant Red Kicks",
+        "price": "$89.99",
+        "description": "Stand out with these eye-catching red kicks.",
+        "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
+        "colors": [
+            {
+                "color": "Black",
+                "image": "images/shoes-black.png"
+            },
+            {
+                "color": "White",
+                "image": "images/shoes-white.png"
+            },
+            {
+                "color": "Red",
+                "image": "images/shoes-red.png"
+            },
+            {
+                "color": "Blue",
+                "image": "images/shoes-blue.png"
+            }
+        ]
+    },
+    {
+        "name": "Cool Blue Loafers",
+        "price": "$84.99",
+        "description": "Chic blue loafers for a sophisticated look.",
+        "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
+        "colors": [
+            {
+                "color": "Black",
+                "image": "images/shoes-black.png"
+            },
+            {
+                "color": "White",
+                "image": "images/shoes-white.png"
+            },
+            {
+                "color": "Red",
+                "image": "images/shoes-red.png"
+            },
+            {
+                "color": "Blue",
+                "image": "images/shoes-blue.png"
+            }
+        ]
+    }
 ]
