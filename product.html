@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivant | Shoes for all-Day Comfort</title>
+    <meta name="description" content="This website was made for individuals to connect with mentors for career guidance and networking. Users can be individuals looking for mentors or individuals wiling to be a mentor offering their own availability to mentor a student or a career seeker.">
+    <meta name="author" content="Adson Mettler do Nascimento">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta property="og:title" content="UponRock | Network Your Career">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://adsonmettler.github.io/wdd231/chamber/">
+    <meta property="og:url" content="https://adsonmettler.github.io/wdd231/chamber/">
+    <meta property="og:descripiton" content="This website was made for individuals to connect with mentors for career guidance and networking. Users can be individuals looking for mentors or individuals wiling to be a mentor offering their own availability to mentor a student or a career seeker.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/testimonials.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- NAVIGATION -->
+        
+        <div class="header">
+            <div class="image-logo">
+                <a href=""><img src="images/vivant-logo.svg" alt="logomarca UponRock" width="50" height="50"></a>
+            </div>
+            <!-- Hamburger menu button -->
+            <button id="menubutton" aria-label="menu"></button>
+        </div>
+
+        <nav id="animatemenu">
+            <ul class="navigation-links">
+                <li><a href="https://adsonmettler.github.io/wdd231/project/">Home</a></li>
+                <li><a href="https://adsonmettler.github.io/wdd231/project/mentors.html">Shop cart</a></li>
+                <li><a href="https://adsonmettler.github.io/wdd231/project/join.html" class="nav-btn">Sign up</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <div class="hero-container">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Wear<br> <span class="animated-text" id="dynamic-text"></span></h1>
+                    <p>The Everyday Essential for Healthcare Professionals</p>
+                    <a href="https://adsonmettler.github.io/wdd231/project/mentors.html" class="hero-btn">Shop now</a>
+                </div>
+                <img src="images/vivant-element-1.png" alt="A business man and business woman building career together through UponRock hub" width="400" class="hero-image">
+            </div>
+            <!-- Half ball element -->
+            <div class="ball-element"></div>
+        </div>
+        
+        
+
+
+    <!-- BEST SELLER SECTION -->
+<div class="best-sellers-container">
+    <div class="best-title-container">
+        <h2 class="best-title">Best Sellers</h2>
+    </div>
+    <div class="best">
+        <div class="product-card">
+            <div class="image-container">
+                <img src="images/vivant-female-white.png" alt="Female shoes" class="product-image" loading="lazy">
+            </div>
+            <h3>Vivant Shoes<br> for Woman</h3>
+            <p>Stylish shoes perfect for any occasion.</p>
+            <div class="color-select">
+                <label for="color-female">Color:</label>
+                <button id="color-black-female" class="color-button" onclick="changeColor('images/vivant-female-black.png', this)"></button>
+                <button id="color-white-female" class="color-button" onclick="changeColor('images/vivant-female-white.png', this)"></button>
+            </div>
+            <div class="size-select">
+                <label for="size-female">Size:</label>
+                <select id="size-female">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <p class="price">$99.99</p>
+            <button class="shop-now-button">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="images/vivant-male.jpg" alt="Male shoes" class="product-image" loading="lazy">
+            </div>
+            <h3>Vivant Shoes<br> for Man</h3>
+            <p>Stylish shoes that fit every style.</p>
+            <div class="color-select">
+                <label for="color-male">Color:</label>
+                <button id="color-black-male" class="color-button" onclick="changeColor('images/vivant-black.jpg', this)"></button>
+                <button id="color-white-male" class="color-button" onclick="changeColor('images/vivant-white.jpg', this)"></button>
+            </div>
+            <div class="size-select">
+                <label for="size-male">Size:</label>
+                <select id="size-male">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <p class="price">$99.99</p>
+            <button class="shop-now-button">Shop Now</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+
+    <!-- TESTIMONIALS SECTION -->
+    <div class="testimonial-container" id="testimonialContainer">
+        <h1>What Students Are Saying About UponRock</h1>
+        <!-- Testimonials will be inserted here -->
+    </div>
+
+
+    <!-- FAQ SECTION -->
+    
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+          <div class="faq">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>Since UponRock doesn't charge students, how does the company make money?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Companies pay us to help them find top talent—like you! By sharing your mentors' positive feedback, companies can see it and invite you to interviews.</p>
+            </div>
+          </div>
+          
+          <div class="faq">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>Do I need to prepare for a meeting with a mentor?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! The professional is offering their advice for free, so it's important to be respectful of their time. Get prepare to come up with great questions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li><a href="https://adsonmettler.github.io/wdd231/project/index.html">How it Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACT INFORMATION</h4>
+                    <ul>
+                        <li>188, Fairview Mall Drive - Toronto, CA</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FOLLOW US</h4>
+                    <ul class="social-links">
+                        <li><a href="https://github.com/adsonmettler" aria-label="github"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/adsonmettler/" aria-label="linkedin"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/adsonmettler/" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Horizontal Line to Separate Sections -->
+            <hr class="footer-separator">
+
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <a href=""><img src="images/vivant-logo-white.svg" alt="logomarca Adson" width="50" loading="lazy"></a>
+                </div>
+                <p id="year">&copy; <span class="highlight">YYYY</span> Adson Mettler do Nascimento | Web Designer</p>
+            </div>
+            <p> <span class="highlight"></span></p>
+            <p id="lastModifiedDate" class="highlight">Last modified: </p>
+        </div>
+        
+    </footer>
+    
+
+</body>
+</html>

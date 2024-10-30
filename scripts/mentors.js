@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             mentors.forEach(mentor => {
                 const card = document.createElement("div");
                 card.className = "card";
-
+                
                 card.innerHTML = `
                     <img src="${mentor.image}" alt="${mentor.name}" class="mentor-image">
                     <h2 class="mentor-name">${mentor.name}</h2>
