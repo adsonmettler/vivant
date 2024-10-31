@@ -18,7 +18,7 @@ hamButton.addEventListener('click', () => {
 // TEXT ANIMATION HERO PAGE
 
 document.addEventListener("DOMContentLoaded", function() {
-    const words = ["Durability", "Resistance", "Safety", "Confort"];
+    const words = ["Walk Safely", "Walk Comfortable", "Walk Vivant"];
     let wordIndex = 0;
     let charIndex = 0;
     const typingSpeed = 100; // Speed of typing each character
