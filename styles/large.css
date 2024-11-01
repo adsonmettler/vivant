@@ -347,41 +347,88 @@ h2.best-title {
 
 
 
-/*----------- TESTIMONIALS CARD --------------*/
+/*----------- TESTIMONIALS SECTION --------------*/
 
 
-.testimonial-container {
-    max-width: 800px;
+
+/* Main section container to hold title and testimonials */
+.reviews-section {
+    max-width: 1440px;
     margin: 0 auto;
-    background-color: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    text-align: center;
 }
-.testimonial {
+
+/* Center and style the title */
+.testimonial-section h1 {
+    font-size: 2rem;
     margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    align-items: flex-start;
 }
+
+/* Grid layout specifically for testimonials */
+.reviews-container {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr; /* Default single column for small screens */
+    gap: 20px;
+    text-align: left;
+    background-color: var(--accent1-color);
+    padding: 1em 4em;
+}
+
+/* Four-column layout for larger screens */
+@media (min-width: 992px) {
+    .reviews-container {
+        grid-template-columns: repeat(4, 1fr); /* Four columns for large screens */
+    }
+}
+
+.testimonial {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center-align content */
+    text-align: center; /* Center-align text within each card */
+}
+
+/* Image styling */
 .testimonial img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-bottom: 10px;
 }
+
+/* Text styling */
 .testimonial h2 {
-    margin: 1em 0;
     font-size: 1rem;
+    margin: 10px 0;
 }
+
 .testimonial h3 {
-    margin: .5em 0;
     font-size: 1.2rem;
-}
-.testimonial p {
     margin: 5px 0;
+}
+
+.testimonial p {
     font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Rating stars in yellow */
+.rating {
+    display: flex;
+    gap: 3px;
+    justify-content: center; /* Center-align stars */
+    margin-top: 10px;
+}
+
+.rating .star {
+    color: gold; /* Yellow color for stars */
+    font-size: 1.2rem;
 }
 
 

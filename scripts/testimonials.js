@@ -2,60 +2,66 @@ document.addEventListener("DOMContentLoaded", () => {
     const testimonialContainer = document.getElementById("testimonialContainer");
 
     // Fetching the JSON data
-    fetch('data/testimonials.json')
+    fetch('data/product_reviews.json')
         .then(response => response.json())
         .then(data => {
-            const testimonials = data.testimonials;
+            const reviews = data.product_reviews;
             
-            testimonials.forEach(testimonial => {
-                // Create a div for each testimonial
-                const testimonialDiv = document.createElement("div");
-                testimonialDiv.classList.add("testimonial");
+            reviews.forEach(review => {
+                // Create a div for each review
+                const reviewDiv = document.createElement("div");
+                reviewDiv.classList.add("testimonial");
 
                 // Create and append the image
                 const img = document.createElement("img");
-                img.src = testimonial.image_url;
-                img.alt = `${testimonial.name}'s photo`;
+                img.src = review.image_url;
+                img.alt = `${review.name}'s photo`;
                 img.style.width = "80px";
                 img.style.height = "80px";
-                testimonialDiv.appendChild(img);
+                reviewDiv.appendChild(img);
 
                 // Create a div for text content to organize better
                 const textContentDiv = document.createElement("div");
 
-                // Create and append the testimonial note
-                const testimonialPara = document.createElement("p");
-                testimonialPara.textContent = `“${testimonial.testimonial_note}”`;
-                textContentDiv.appendChild(testimonialPara);
+                // Create and append the review note
+                const reviewPara = document.createElement("p");
+                reviewPara.textContent = `“${review.review_note}”`;
+                textContentDiv.appendChild(reviewPara);
 
-                // Create and append the name and year
+                // Create and append the name and profession
                 const nameHeader = document.createElement("h2");
-                nameHeader.textContent = `${testimonial.name}, ${testimonial.year_of_degree}`;
+                nameHeader.textContent = `${review.name}, ${review.profession}`;
                 textContentDiv.appendChild(nameHeader);
 
-                // Create and append the university
-                const universityPara = document.createElement("h3");
-                universityPara.textContent = `${testimonial.university}`;
-                textContentDiv.appendChild(universityPara);
+                // Create and append the location
+                const locationPara = document.createElement("h3");
+                locationPara.textContent = `${review.location}`;
+                textContentDiv.appendChild(locationPara);
 
-                
+                // Create and append the star rating
+                const ratingDiv = document.createElement("div");
+                ratingDiv.classList.add("rating");
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.createElement("span");
+                    star.classList.add("star");
+                    star.textContent = i <= review.rating ? "★" : "☆"; // Filled star for rating, empty star otherwise
+                    ratingDiv.appendChild(star);
+                }
+                textContentDiv.appendChild(ratingDiv);
 
-                // Append the text content div to the main testimonial div
-                testimonialDiv.appendChild(textContentDiv);
+                // Append the text content div to the main review div
+                reviewDiv.appendChild(textContentDiv);
 
-                // Append each testimonial to the container
-                testimonialContainer.appendChild(testimonialDiv);
+                // Append each review to the container
+                testimonialContainer.appendChild(reviewDiv);
             });
         })
         .catch(error => {
-            console.error('Error fetching the testimonials:', error);
+            console.error('Error fetching the product reviews:', error);
         });
 });
 
-
-
-  function toggleAnswer(element) {
+function toggleAnswer(element) {
     const faq = element.parentElement;
     faq.classList.toggle('faq-active');
-  }
-
+}
