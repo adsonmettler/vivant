@@ -233,6 +233,7 @@ h1 {
     overflow: hidden;
     flex: 1 1 30%; /* Each card takes up about 1/3 of the container's width */
     max-width: 300px; /* Optional: to limit the maximum width for each card */
+    border-radius: 6rem;
   }
   
   .vertical-image {
