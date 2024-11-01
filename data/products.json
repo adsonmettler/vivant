@@ -2,49 +2,26 @@
     {
         "name": "Classic Pro-Support",
         "price": "$79.99",
-        "description": "Stylish gray shoes perfect for any occasion.",
-        "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
-        "colors": [
-            {
-                "color": "gray",
-                "image": "images/vivant-gray-shoe-1.png"
-            },
-            {
-                "color": "Blue",
-                "image": "images/vivant-blue-shoe-1.png"
-            }
-        ]
+        "image": "images/vivant-gray-shoe-1.png"
     },
     {
         "name": "Sleek White Sneakers",
         "price": "$69.99",
-        "description": "Comfortable white sneakers for everyday wear.",
-        "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
-        "colors": [
-            {
-                "color": "White",
-                "image": "images/shoes-white.png"
-            }
-        ]
+        "image": "images/shoes-white.png"
     },
     {
         "name": "Cool Green",
         "price": "$84.99",
-        "description": "Chic blue loafers for a sophisticated look.",
-        "sizes": [7, 8, 9, 10, 11, 12, 13, 14],
-        "colors": [
-            {
-                "color": "Black",
-                "image": "images/shoes-black.png"
-            },
-            {
-                "color": "White",
-                "image": "images/shoes-white.png"
-            },
-            {
-                "color": "Green",
-                "image": "images/shoes-blue.png"
-            }
-        ]
+        "image": "images/shoes-blue.png"
+    },
+    {
+        "name": "Black Runner",
+        "price": "$89.99",
+        "image": "images/shoes-black.png"
+    },
+    {
+        "name": "Casual Everyday",
+        "price": "$74.99",
+        "image": "images/vivant-blue-shoe-1.png"
     }
 ]

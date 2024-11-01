@@ -102,43 +102,47 @@
         <h1>Best Sellers</h1>
     </div>
 
-    <div id="product-cards" class="card-container"></div> <!-- Container for displaying product info -->
+    <div class="product-carousel">
+        <button id="scrollLeft" class="scroll-button">←</button>
+        <div id="product-cards" class="card-container"></div>
+        <button id="scrollRight" class="scroll-button">→</button>
+    </div>
 
     <!-- Modal -->
     <div id="messageModal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h2>Write a Message</h2>
-            <p>Introduce yourself, mention your background, and ask interesting questions related to the product's field. This is your chance to get attention.</p>
             
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" placeholder="Your full name" required>
+            <!-- New container for image and content -->
+            <div class="modal-body">
+                <!-- Product Image -->
+                <img id="modalProductImage" src="" alt="Product Image" class="modal-product-image">
+                
+                <!-- Text and Form -->
+                <div class="modal-text">
+                    <h2>Save 20% on your<br> first order!</h2>
+                    <p id="modalDiscountText">Submit your email/phone number for a 20% discount on your first order.<br><br>
+                    We will also keep you up to date with exclusive discounts and new product releases!</p>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" placeholder="Your email address" required>
-
-            <label for="messageText">Message:</label>
-            <textarea id="messageText" rows="5" placeholder="Write your message here..." required></textarea>
-            
-            <button id="sendApplication" class="cta-button">Send Application</button>
-        </div>
-    </div>
-
-    <!-- Thank You Modal -->
-    <div id="thankYouModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" id="closeThankYouModal">&times;</span>
-            <h2>Thank You!</h2>
-            <p><strong>Your application was submitted successfully!</strong><br><br>
-                This mentor will evaluate and approve your application.<br>
-                You will receive a response at the email address you provided.
-            </p>
-            <button id="goBackButton" class="cta-button">Go Back</button>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Email address" required>
+                    
+                    <label for="fullName">Phone Number</label>
+                    <div class="input-row">
+                        <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+                        <button id="sendApplication" class="cta-button">Continue</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 
 
+    
+
+
+     
 
 
     <!-- TESTIMONIALS SECTION -->
