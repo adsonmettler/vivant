@@ -79,7 +79,7 @@ nav a.active-menu-link {
   
   /* Hover Effects */
   .navigation-links a:hover {
-    color: var(--primary-color);
+    color: rgb(70, 159, 154);
   }
 
 
@@ -147,39 +147,31 @@ nav a.active-menu-link {
     color: var(--accent3-color);
 }
 
-/* @keyframes wobble {
+/* Keyframe for 360-degree spin */
+@keyframes spin {
     0% {
-        transform: rotate(25deg) translate(0, 0);
-    }
-    25% {
-        transform: rotate(10deg) translate(0, 0);
-    }
-    50% {
-        transform: rotate(25deg) translate(0, 0);
-    }
-    75% {
-        transform: rotate(10deg) translate(0, 0);
+        transform: rotate(0deg);
     }
     100% {
-        transform: rotate(45deg) translate(0, 0);
+        transform: rotate(-360deg);
     }
-} */
+}
 
 .hero-image {
     max-width: 500px;
     height: auto;
     border-radius: 10px;
-    margin: 0 5em 0 0;
+    margin: 0 3em 0 0;
     z-index: 999;
-    /* animation: wobble 3s ease-in-out infinite alternate; */
 }
 
-/* .spin-image {
+.spin-image {
+    width: 200px;
     position: absolute;
-    top: 20%;
+    top: 90%;
     right: 90%;
-    animation: wobble 3s ease-in-out infinite alternate;
-} */
+    animation: spin 20s linear infinite; /* Adjust 3s to your preferred speed */
+}
 
 
 .hero {
@@ -227,7 +219,7 @@ h1 {
 #with-you-section {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 2em;
     padding: 40px;
     background: linear-gradient(180deg, #e0f7fa, rgb(70, 159, 154));
     flex-wrap: wrap;
@@ -459,14 +451,14 @@ h2.best-title {
 }
 
 .testimonial {
-    background-color: rgb(0, 62, 101);
+    background: linear-gradient(to bottom, rgb(0, 80, 130), rgb(0, 35, 55));
     padding: 2em;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center-align content */
-    text-align: center; /* Center-align text within each card */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* Image styling */
