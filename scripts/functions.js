@@ -65,3 +65,22 @@ function changeColor(imageSrc, button) {
 
 
 
+// SUPPORT SECTION - Scroll animation
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('.image-card');
+  
+    function handleScroll() {
+      images.forEach((image) => {
+        const rect = image.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          image.classList.add("fade-in");
+        }
+      });
+    }
+  
+    window.addEventListener("scroll", handleScroll);
+  });
+  
+  

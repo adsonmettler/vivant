@@ -210,8 +210,6 @@ h1 {
 
 
 
-
-
 .animated-text {
     display: inline-block;
     border-right: 2px solid black; /* Optional blinking cursor */
@@ -222,6 +220,82 @@ h1 {
     vertical-align: text-bottom; /* Align with "Unique" */
     z-index: 9999;
 }
+
+
+/* SUPPORTING THOSE WHO STAND - SECTION */
+
+#with-you-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 40px;
+    background: linear-gradient(180deg, #e0f7fa, rgb(70, 159, 154));
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .image-card {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 30%; /* Each card takes up about 1/3 of the container's width */
+    max-width: 300px; /* Optional: to limit the maximum width for each card */
+  }
+  
+  .vertical-image {
+    width: 100%; /* Makes sure the image fills the card's width */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-card:hover .vertical-image {
+    transform: scale(1.05);
+  }
+  
+  .overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-card:hover .overlay-text {
+    opacity: 0.9;
+  }
+  
+  /* Quote Style */
+  .quote {
+    width: 100%;
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgb(45, 104, 101);
+    border-left: 4px solid white;
+    order: 2; /* Makes sure quote comes below the images */
+  }
+  
+  /* Fade-in Animation */
+  .image-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .image-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  
+
+
 
 
 
@@ -406,7 +480,7 @@ h2.best-title {
 
 /* Text styling */
 .testimonial h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 10px 0;
     color: white;
 }
