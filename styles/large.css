@@ -85,17 +85,17 @@ nav a.active-menu-link {
 
   .navigation-links .nav-btn {
     font-weight: 600;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 20px;
     padding: .6em 1em;
     margin: .6em 0;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     background-color: transparent;
 }
 
 
 .navigation-links .nav-btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--accent3-color);
 }
 
@@ -127,6 +127,7 @@ nav a.active-menu-link {
 .hero-text {
     max-width: 50%;
     text-align: left;
+    
 }
 
 .hero-btn {
@@ -148,19 +149,19 @@ nav a.active-menu-link {
 
 /* @keyframes wobble {
     0% {
-        transform: rotate(0deg) translate(0, 0);
+        transform: rotate(25deg) translate(0, 0);
     }
     25% {
-        transform: rotate(1deg) translate(2px, -2px);
+        transform: rotate(10deg) translate(0, 0);
     }
     50% {
-        transform: rotate(-3deg) translate(-3px, 3px);
+        transform: rotate(25deg) translate(0, 0);
     }
     75% {
-        transform: rotate(2deg) translate(1px, -1px);
+        transform: rotate(10deg) translate(0, 0);
     }
     100% {
-        transform: rotate(0deg) translate(0, 0);
+        transform: rotate(45deg) translate(0, 0);
     }
 } */
 
@@ -172,6 +173,13 @@ nav a.active-menu-link {
     z-index: 999;
     /* animation: wobble 3s ease-in-out infinite alternate; */
 }
+
+/* .spin-image {
+    position: absolute;
+    top: 20%;
+    right: 90%;
+    animation: wobble 3s ease-in-out infinite alternate;
+} */
 
 
 .hero {
@@ -197,7 +205,7 @@ h1 {
     font-weight: 900;
     margin: .2em 0;
     color: var(--secondary-color);
-    line-height: 1.2; /* Ensure consistent line height */
+    line-height: 1em; /* Ensure consistent line height */
 }
 
 
@@ -285,19 +293,17 @@ h3 {
     margin: 0 0 1em 0;
 }
 
-#color-black-female,
-#color-black-male {
+#color-white-female {
     margin: 0 5px; /* Space between color buttons */
     padding: 1em 1em;
     border: none; /* No border */
     border-radius: 999999px;
-    background-color: var(--accent2-color); /* Use your accent color */
-    color: white; /* Button text color */
+    background-color: var(--accent3-color); /* Use your accent color */
+    color: white;
     cursor: pointer;
 }
 
-#color-white-female,
-#color-white-male {
+#color-blue-female {
     margin: 0 5px; /* Space between color buttons */
     padding: 1em 1em;
     border: 1px solid black;
@@ -308,7 +314,7 @@ h3 {
 }
 
 .price {
-    font-size: 1.5rem; /* Price font size */
+    font-size: 1.5rem;
     font-weight: bold; /* Price bold */
     margin: 1em 0; /* Space around price */
 }

@@ -25,8 +25,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/functions.js"></script>
     <script defer src="scripts/testimonials.js"></script>
+    <script defer src="scripts/products.js"></script>
 </head>
 
 <body>
@@ -59,16 +60,20 @@
         <div class="hero-container">
             <div class="hero">
                 <div class="hero-text">
-                    <h1>With you,<br> Every Step<br><span class="animated-text" id="dynamic-text"></span></h1>
+                    <h1>WITH YOU,<br> EVERY STEP<br><span class="animated-text" id="dynamic-text"></span></h1>
                     <p>The Everyday Essential for Healthcare Professionals</p>
                     <a href="https://adsonmettler.github.io/wdd231/project/mentors.html" class="hero-btn">Shop now</a>
                 </div>
                 <img src="images/vivant-white-shoes-1.png" alt="A business man and business woman building career together through UponRock hub" width="400" class="hero-image">
             </div>
+            <div>
+                <img src="images/vivant-element-spin.png" alt="Design element saying in every step vitality" width="100" class="spin-image">
+            </div>
             <!-- Half ball element -->
             <div class="ball-element"></div>
         </div>
         
+
         
 
 
@@ -80,14 +85,14 @@
     <div class="best">
         <div class="product-card">
             <div class="image-container">
-                <img src="images/vivant-female-white.png" alt="Female shoes" class="product-image" loading="lazy">
+                <img src="images/vivant-gray-shoe-1.png" alt="Female shoes" class="product-image" loading="lazy">
             </div>
             <h3>Vivant Shoes<br> for Woman</h3>
             <p>Stylish shoes perfect for any occasion.</p>
             <div class="color-select">
                 <label for="color-female">Color:</label>
-                <button id="color-black-female" class="color-button" onclick="changeColor('images/vivant-female-black.png', this)"></button>
-                <button id="color-white-female" class="color-button" onclick="changeColor('images/vivant-female-white.png', this)"></button>
+                <button id="color-gray-female" class="color-button" onclick="changeColor('images/vivant-gray-shoe-1.png', this)"></button>
+                <button id="color-blue-female" class="color-button" onclick="changeColor('images/vivant-blue-shoes-1.png', this)"></button>
             </div>
             <div class="size-select">
                 <label for="size-female">Size:</label>
@@ -103,14 +108,35 @@
 
         <div class="product-card">
             <div class="image-container">
-                <img src="images/vivant-male.jpg" alt="Male shoes" class="product-image" loading="lazy">
+                <img src="images/vivant-white-shoes-1.png" alt="Male shoes" class="product-image" loading="lazy">
             </div>
             <h3>Vivant Shoes<br> for Man</h3>
             <p>Stylish shoes that fit every style.</p>
             <div class="color-select">
                 <label for="color-male">Color:</label>
-                <button id="color-black-male" class="color-button" onclick="changeColor('images/vivant-black.jpg', this)"></button>
-                <button id="color-white-male" class="color-button" onclick="changeColor('images/vivant-white.jpg', this)"></button>
+                <button id="color-white-male" class="color-button" onclick="changeColor('images/vivant-white-shoes-1.png', this)"></button>
+            </div>
+            <div class="size-select">
+                <label for="size-male">Size:</label>
+                <select id="size-male">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <p class="price">$99.99</p>
+            <button class="shop-now-button">Shop Now</button>
+        </div>
+        
+        <div class="product-card">
+            <div class="image-container">
+                <img src="images/vivant-white-shoes-1.png" alt="Male shoes" class="product-image" loading="lazy">
+            </div>
+            <h3>Vivant Shoes<br> for Man</h3>
+            <p>Stylish shoes that fit every style.</p>
+            <div class="color-select">
+                <label for="color-male">Color:</label>
+                <button id="color-white-male" class="color-button" onclick="changeColor('images/vivant-white-shoes-1.png', this)"></button>
             </div>
             <div class="size-select">
                 <label for="size-male">Size:</label>
@@ -179,8 +205,9 @@
             
             <div class="footer-links">
                 <div class="footer-section">
-                    <h4>HELP</h4>
+                    <h4>Help & Support</h4>
                     <ul>
+                        <li><a href="">Accessibility</a></li>
                         <li><a href="">Terms of Sale</a></li>
                         <li><a href="">Order Status</a></li>
                         <li><a href="">Returns</a></li>
@@ -189,9 +216,9 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>COMPANY</h4>
+                    <h4>About Vivant</h4>
                     <ul>
-                        <li><a href="">About Vivant</a></li>
+                        <li><a href="">Investors</a></li>
                         <li><a href="">News</a></li>
                         <li><a href="">Sustainability</a></li>
                         <li><a href="">Career</a></li>
@@ -200,11 +227,12 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>FOLLOW US</h4>
+                    <h4>Follow Us</h4>
                     <ul class="social-links">
-                        <li><a href="https://github.com/adsonmettler" aria-label="github"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/adsonmettler/" aria-label="linkedin"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/adsonmettler" aria-label="github"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/adsonmettler/" aria-label="linkedin"><i class="fab fa-youtube"></i></a></li>
                         <li><a href="https://www.instagram.com/adsonmettler/" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/adsonmettler/" aria-label="instagram"><i class="fab fa-facebook"></i></a></li>
                     </ul>
                 </div>
             </div>

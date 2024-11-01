@@ -678,8 +678,8 @@ label {
 /*----------- FOOTER --------------*/
 
 .footer {
-    background: var(--accent2-color);
-    color: var(--accent1-color);
+    background: linear-gradient(to bottom, rgb(0, 62, 101), rgb(0, 29, 46));
+    color: var(--accent3-color);
     padding: 40px 0 0;
 }
 
@@ -731,7 +731,7 @@ label {
 }
 
 .footer-section ul li a:hover {
-    color: rgb(83, 140, 236);
+    color: white;
     text-decoration: underline;
 }
 
@@ -759,7 +759,7 @@ label {
 .footer-separator {
     width: 100%;
     border: 0;
-    border-top: 1px solid rgba(0, 90, 240, 0.5);
+    border-top: 1px solid rgb(98, 152, 223);
     margin: 0 0 10px;
 }
 
@@ -781,6 +781,7 @@ label {
 
 .footer-logo img {
     max-width: 150px;
+    margin: 2em 0;
 }
 
 .highlight {
