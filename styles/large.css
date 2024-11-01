@@ -461,7 +461,7 @@ h1 {
 /* Main section container to hold title and testimonials */
 .reviews-section {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 4em auto;
     padding: 20px;
     text-align: center;
 }
@@ -545,9 +545,9 @@ h1 {
 
 
 .partners-section {
-    padding: 40px;
+    padding: 10em 2em;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #eaf6ff;
 }
 
 .partners-section h2 {
