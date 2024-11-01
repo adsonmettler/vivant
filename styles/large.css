@@ -360,9 +360,10 @@ h2.best-title {
 }
 
 /* Center and style the title */
-.testimonial-section h1 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+.reviews-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1em;
+    font-weight: 500;
 }
 
 /* Grid layout specifically for testimonials */
@@ -372,7 +373,7 @@ h2.best-title {
     grid-template-columns: 1fr; /* Default single column for small screens */
     gap: 20px;
     text-align: left;
-    background-color: var(--accent1-color);
+    background-color: var(--accent3-color);
     padding: 1em 4em;
 }
 
@@ -384,7 +385,7 @@ h2.best-title {
 }
 
 .testimonial {
-    background-color: white;
+    background-color: rgb(0, 62, 101);
     padding: 2em;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -400,12 +401,14 @@ h2.best-title {
     height: 80px;
     border-radius: 50%;
     margin-bottom: 10px;
+    margin: 0 auto;
 }
 
 /* Text styling */
 .testimonial h2 {
     font-size: 1rem;
     margin: 10px 0;
+    color: white;
 }
 
 .testimonial h3 {
@@ -414,8 +417,9 @@ h2.best-title {
 }
 
 .testimonial p {
-    font-size: 16px;
+    font-size: 1.2rem;
     margin-top: 10px;
+    color: white;
 }
 
 /* Rating stars in yellow */
@@ -427,9 +431,10 @@ h2.best-title {
 }
 
 .rating .star {
-    color: gold; /* Yellow color for stars */
-    font-size: 1.2rem;
+    color: gold;
+    font-size: 1.8rem;
 }
+
 
 
 

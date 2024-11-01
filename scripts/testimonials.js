@@ -23,31 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Create a div for text content to organize better
                 const textContentDiv = document.createElement("div");
 
-                // Create and append the review note
-                const reviewPara = document.createElement("p");
-                reviewPara.textContent = `“${review.review_note}”`;
-                textContentDiv.appendChild(reviewPara);
+                // Create and append the star rating first
+                const ratingDiv = document.createElement("div");
+                ratingDiv.classList.add("rating");
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.createElement("span");
+                    star.classList.add("star");
+                    star.textContent = i <= review.rating ? "★" : "☆";
+                    ratingDiv.appendChild(star);
+                }
+                textContentDiv.appendChild(ratingDiv);
 
                 // Create and append the name and profession
                 const nameHeader = document.createElement("h2");
                 nameHeader.textContent = `${review.name}, ${review.profession}`;
                 textContentDiv.appendChild(nameHeader);
 
-                // Create and append the location
-                const locationPara = document.createElement("h3");
-                locationPara.textContent = `${review.location}`;
-                textContentDiv.appendChild(locationPara);
-
-                // Create and append the star rating
-                const ratingDiv = document.createElement("div");
-                ratingDiv.classList.add("rating");
-                for (let i = 1; i <= 5; i++) {
-                    const star = document.createElement("span");
-                    star.classList.add("star");
-                    star.textContent = i <= review.rating ? "★" : "☆"; // Filled star for rating, empty star otherwise
-                    ratingDiv.appendChild(star);
-                }
-                textContentDiv.appendChild(ratingDiv);
+                // Create and append the review note (comment) last
+                const reviewPara = document.createElement("p");
+                reviewPara.textContent = `“${review.review_note}”`;
+                textContentDiv.appendChild(reviewPara);
 
                 // Append the text content div to the main review div
                 reviewDiv.appendChild(textContentDiv);
@@ -60,8 +55,3 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Error fetching the product reviews:', error);
         });
 });
-
-function toggleAnswer(element) {
-    const faq = element.parentElement;
-    faq.classList.toggle('faq-active');
-}

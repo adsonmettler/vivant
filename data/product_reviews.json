@@ -1,7 +1,7 @@
 {
   "product_reviews": [
     {
-      "name": "Hector Ivan Lara",
+      "name": "Hector Ivan",
       "profession": "Nurse",
       "location": "Toronto General Hospital",
       "review_note": "The Vivant shoes are fantastic! I spend hours on my feet daily, and these shoes have made a huge difference in my comfort level. The arch support and cushioning are perfect, and I really notice the difference compared to my old footwear. Highly recommended for healthcare professionals!",
@@ -14,7 +14,7 @@
       "location": "Mount Royal Health Center",
       "review_note": "As someone constantly on the move helping clients, I need shoes that offer both support and durability, and Vivant exceeded my expectations. The lightweight design and supportive soles make my day so much easier. A must-have for anyone in healthcare!",
       "image_url": "images/mentor6.webp",
-      "rating": 4
+      "rating": 5
     },
     {
       "name": "Shareena Buan",
@@ -30,7 +30,7 @@
       "location": "Vancouver General Hospital",
       "review_note": "Vivant shoes have been a game-changer for me. Working in a busy hospital, I’m on my feet for long shifts, and these shoes provide incredible support without sacrificing style. The slip-resistant soles are an added bonus, and my feet are thankful every day!",
       "image_url": "images/mentor5.webp",
-      "rating": 4
+      "rating": 5
     }
   ]
 }
