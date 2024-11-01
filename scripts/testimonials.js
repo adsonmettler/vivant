@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 textContentDiv.appendChild(ratingDiv);
 
                 // Create and append the name and profession
-                const nameHeader = document.createElement("h2");
+                const nameHeader = document.createElement("h3");
                 nameHeader.textContent = `${review.name}, ${review.profession}`;
                 textContentDiv.appendChild(nameHeader);
 
