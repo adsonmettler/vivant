@@ -323,7 +323,7 @@ h1 {
 }
 
 .scroll-button:hover {
-    color: #007BFF; /* Change to your desired hover color */
+    color: rgb(70, 159, 154); /* Change to your desired hover color */
 }
 
 /* Positioning the buttons */
