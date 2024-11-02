@@ -570,9 +570,6 @@ h1 {
     width: 250px;
     padding: 3em 2em 0 2em;
     text-align: center;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
