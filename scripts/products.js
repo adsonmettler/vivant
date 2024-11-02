@@ -39,7 +39,7 @@ function createProductCards() {
         img.src = product.image;
         img.alt = product.name;
 
-        const name = document.createElement('p');
+        const name = document.createElement('h3');
         name.textContent = product.name;
 
         const price = document.createElement('p');
@@ -103,19 +103,47 @@ window.addEventListener('click', (e) => {
 });
 
 
-// Scroll functionality
+// Scroll functionality and button visibility management
 const scrollLeftButton = document.getElementById('scrollLeft');
 const scrollRightButton = document.getElementById('scrollRight');
+const scrollAmount = 300; // Amount to scroll with each button click
 
+// Initially hide the left scroll button
+scrollLeftButton.style.display = 'none';
 
-
-scrollLeftButton.addEventListener('click', () => {
-    productCardsContainer.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-});
-
+// Event listener for right button click
 scrollRightButton.addEventListener('click', () => {
-    productCardsContainer.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    productCardsContainer.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
 });
+
+// Event listener for left button click
+scrollLeftButton.addEventListener('click', () => {
+    productCardsContainer.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+    });
+});
+
+// Event listener to check scroll position and toggle buttons
+productCardsContainer.addEventListener('scroll', () => {
+    if (productCardsContainer.scrollLeft > 0) {
+        scrollLeftButton.style.display = 'block';
+    } else {
+        scrollLeftButton.style.display = 'none';
+    }
+
+    // Check if scrolled to the end
+    if (productCardsContainer.scrollLeft + productCardsContainer.clientWidth >= productCardsContainer.scrollWidth) {
+        scrollRightButton.style.display = 'none';
+    } else {
+        scrollRightButton.style.display = 'block';
+    }
+});
+
+
 
 
 
