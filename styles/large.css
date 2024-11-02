@@ -547,7 +547,7 @@ h1 {
 
 
 .partners-section {
-    padding: 10em 2em;
+    padding: 10em 0;
     text-align: center;
     background-color: #eaf6ff;
 }
@@ -567,8 +567,8 @@ h1 {
 }
 
 .partner-card {
-    width: 150px;
-    padding: 10px;
+    width: 250px;
+    padding: 3em 2em 0 2em;
     text-align: center;
     border-radius: 8px;
     background-color: #ffffff;
