@@ -345,13 +345,13 @@ h1 {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-snap-type: x mandatory; /* Snap effect */
-    gap: 16px; /* Add gap between cards */
+    gap: .1em; /* Add gap between cards */
     padding: 1em 6em;
     margin: 0em;
 }
 
 .product-card {
-    flex: 0 0 calc(28% - 16px); /* Show 3 full cards and half of the fourth card */
+    flex: 0 0 calc(30% - 16px); /* Show 3 full cards and half of the fourth card */
     scroll-snap-align: center; /* Align card to the center when scrolling */
     padding: 1em;
     text-align: center;
@@ -361,7 +361,7 @@ h1 {
 .product-card img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    cursor: pointer;
 }
 
 .product-card h3 {
