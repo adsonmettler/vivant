@@ -50,7 +50,8 @@ function createProductCards() {
         card.appendChild(price);
         
         // Add click event to open modal
-        card.addEventListener('click', () => openModal(product.name, product.price));
+        card.addEventListener('click', () => openModal(product.name, product.price, product.image));
+
 
         productCardsContainer.appendChild(card);
     });
@@ -67,9 +68,11 @@ function openModal(productName, productPrice, productImage) {
 
     modal.style.display = 'block';
     modal.querySelector('h2').textContent = `Save 20% on your ${productName}!`;
-    modal.querySelector('#modalDiscountText').textContent = `Get a discount of $${discount}. You get this product for a total of $${discountedPrice}.`;
-    document.getElementById('modalProductImage').src = productImage; // Set product image in modal
+    
+    // Update the image source in the modal
+    document.getElementById('modalProductImage').src = productImage;
 }
+
 
 
 closeButton.addEventListener('click', () => {
@@ -84,13 +87,7 @@ document.querySelectorAll('.product-card img').forEach((image, index) => {
     });
 });
 
-// Function to open modal with specific product data
-function openModal(product) {
-    const modal = document.getElementById('messageModal');
-    document.getElementById('modalProductImage').src = product.image;
-    document.getElementById('modalDiscountText').textContent = `Get a discount of ${product.discountedPrice}. You get this product for a total of ${product.finalPrice}.`;
-    modal.style.display = 'flex';
-}
+
 
 // Close modal when clicking close button or outside modal
 document.querySelector('.close-button').addEventListener('click', () => {
