@@ -55,86 +55,64 @@
 
 
         <!-- PRODUCT SECTION -->
-    <div class="best-sellers-container">
-        <div class="best-title-container">
-            <h2 class="best-title">Best Sellers</h2>
-        </div>
-        <div class="best">
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="images/vivant-gray-shoe-1.png" alt="Female shoes" class="product-image" loading="lazy">
+
+        <div class="product-container">
+            <div class="image-gallery">
+                <div class="main-image">
+                    <img src="images/vivant-gray-shoe-1.png" alt="Vivant Gray Shoe" id="mainProductImage">
                 </div>
-                <h3>Vivant Shoes<br> for Woman</h3>
-                <p>Stylish shoes perfect for any occasion.</p>
+                <div class="thumbnail-images">
+                    <img src="images/vivant-gray-shoe-1.png" alt="Gray Shoe" onclick="changeImage('images/vivant-gray-shoe-1.png')">
+                    <img src="images/vivant-blue-shoes-1.png" alt="Blue Shoe" onclick="changeImage('images/vivant-blue-shoes-1.png')">
+                    <img src="images/vivant-white-shoes-1.png" alt="White Shoe" onclick="changeImage('images/vivant-white-shoes-1.png')">
+                </div>
+            </div>
+
+            <div class="product-details">
+                <h1>Vivant Shoes for Women</h1>
+                <p class="description">Stylish shoes perfect for any occasion.</p>
+                <p class="price">$99.99</p>
+
                 <div class="color-select">
-                    <label for="color-female">Color:</label>
-                    <button id="color-gray-female" class="color-button" onclick="changeColor('images/vivant-gray-shoe-1.png', this)"></button>
-                    <button id="color-blue-female" class="color-button" onclick="changeColor('images/vivant-blue-shoes-1.png', this)"></button>
+                    <label for="color-select">Color:</label>
+                    <select id="color-select" onchange="changeColor(this.value)">
+                        <option value="gray">Gray</option>
+                        <option value="blue">Blue</option>
+                        <option value="white">White</option>
+                    </select>
                 </div>
+
                 <div class="size-select">
-                    <label for="size-female">Size:</label>
-                    <select id="size-female">
+                    <label for="size-select">Size:</label>
+                    <select id="size-select">
                         <option value="8">8</option>
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
                 </div>
-                <p class="price">$99.99</p>
-                <button class="shop-now-button">Shop Now</button>
-            </div>
 
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="images/vivant-white-shoes-1.png" alt="Male shoes" class="product-image" loading="lazy">
-                </div>
-                <h3>Vivant Shoes<br> for Man</h3>
-                <p>Stylish shoes that fit every style.</p>
-                <div class="color-select">
-                    <label for="color-male">Color:</label>
-                    <button id="color-white-male" class="color-button" onclick="changeColor('images/vivant-white-shoes-1.png', this)"></button>
-                </div>
-                <div class="size-select">
-                    <label for="size-male">Size:</label>
-                    <select id="size-male">
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-                <p class="price">$99.99</p>
-                <button class="shop-now-button">Shop Now</button>
+                <button class="shop-now-button">Add to Cart</button>
             </div>
         </div>
-    </div>
 
+        <section class="product-description-section">
+            <h2>Product Description</h2>
+            <p>This shoe features a stylish design with exceptional comfort, perfect for all-day wear. The material is durable and breathable, ensuring your feet stay comfortable throughout the day.</p>
+        </section>
 
-    <!-- FAQ SECTION -->
+        <section class="reviews-section">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <h3>Jane Doe</h3>
+                <p>These shoes are amazing! Super comfortable and stylish.</p>
+            </div>
+            <div class="review">
+                <h3>John Smith</h3>
+                <p>I love the color options and the fit is perfect!</p>
+            </div>
+        </section>
+
     
-    <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        
-        <div class="faq-container">
-          <div class="faq">
-            <div class="faq-question" onclick="toggleAnswer(this)">
-              <h3>Since UponRock doesn't charge students, how does the company make money?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Companies pay us to help them find top talent—like you! By sharing your mentors' positive feedback, companies can see it and invite you to interviews.</p>
-            </div>
-          </div>
-          
-          <div class="faq">
-            <div class="faq-question" onclick="toggleAnswer(this)">
-              <h3>Do I need to prepare for a meeting with a mentor?</h3>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-              <p>Yes! The professional is offering their advice for free, so it's important to be respectful of their time. Get prepare to come up with great questions.</p>
-            </div>
-          </div>
-        </div>
-      </section>
       
 
 
@@ -189,6 +167,17 @@
         </div>
         
     </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainProductImage').src = src;
+        }
+
+        function changeColor(color) {
+            // Add functionality to change color
+            console.log('Color changed to:', color);
+        }
+    </script>
     
 
 </body>
