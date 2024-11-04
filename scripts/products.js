@@ -2,27 +2,27 @@
 const products = [
     {
         "name": "Classic Pro-Support",
-        "price": "$79.99",
+        "price": "$189.99",
         "image": "images/vivant-gray-shoes-1.png"
     },
     {
         "name": "Safe White",
-        "price": "$69.99",
+        "price": "$149.99",
         "image": "images/vivant-white-shoes-2.png"
     },
     {
         "name": "Dark Blue Confort",
-        "price": "$89.99",
+        "price": "$219.99",
         "image": "images/vivant-black-shoes-1.png"
     },
     {
         "name": "Classic Pro-Support",
-        "price": "$84.99",
+        "price": "$189.99",
         "image": "images/vivant-blue-shoes-1.png"
     },
     {
-        "name": "Casual Everyday",
-        "price": "$74.99",
+        "name": "Classic Pro-Support",
+        "price": "$184.99",
         "image": "images/vivant-green-shoes.png"
     }
 ];
