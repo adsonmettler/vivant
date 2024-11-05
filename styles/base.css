@@ -50,7 +50,7 @@ header {
 /*----------- NAVIGATION --------------*/
 
 nav {
-    background-color: var(--secondary-color);
+    background-color: white;
     font-size: 1rem;
 }
 
@@ -63,16 +63,14 @@ nav a {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: var(--accent2-color);
+    color: rgb(0, 62, 101);
     font-weight: 500;
     margin: 0 1rem; /* Margin between links */
     padding: 1.4rem 0;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transition effects */
 }
 
-nav a:hover {
-    color: var(--primary-color); /* Change text color on hover */
-}
+
 
 nav a.active-menu-link {
     text-decoration: underline; /* Underline for active link */
@@ -83,8 +81,7 @@ nav a.active-menu-link {
 
 .nav-btn {
     font-weight: 600;
-    color: var(--accent1-color);
-    background-color: var(--primary-color);
+    color: rgb(0, 62, 101);
 }
 
 
@@ -118,7 +115,7 @@ nav a.active-menu-link {
 #menubutton.open::before {
     content: "X"; /* Close icon when open */
     font-weight: 600;
-    font-family: "Montserrat";
+    font-family: "Inter";
 }
 
 @media (max-width: 999px) {
@@ -147,60 +144,137 @@ nav a.active-menu-link {
 
 
 
-/*----------- HERO SECTION FOR MOBILE --------------*/
+/* Mobile Styles */
+@media (max-width: 500px) {
 
-.hero {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-    padding: 20px
+    html, body {
+        max-width: 100%;
+        font-family: "Inter", serif;
+        font-style: normal;
+        overflow-x: hidden;
+        background: var(--accent3-color);
+        padding: 0; /* Reset padding */
+    }
+
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        padding: 1em; /* Add some padding for touch targets */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack nav links */
+        align-items: flex-start; /* Align items to the left */
+        width: 100%; /* Full width for mobile */
+    }
+
+    nav {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items */
+        width: 100%; /* Full width */
+    }
+
+    nav a.active-menu-link {
+        text-decoration: underline;
+    }
+
+    .navigation-links a {
+        justify-content: flex-start; /* Align links to the left */
+        padding: 1em; /* Add padding for touch targets */
+        width: 100%; /* Full width for links */
+    }
+
+    .search-field {
+        margin-top: 1em; /* Add space above search field */
+    }
+
+    .search-field .search-icon {
+        position: absolute;
+        left: 5.5em;
+        top: 14.9em;
+        color: var(--secondary-color);
+        font-size: 1rem;
+    }
+
+    .search-field input {
+        width: 100%; /* Full width for input */
+        padding: 0.7em 2.5em; /* Adjust padding */
+    }
+
+    .hero {
+        flex-direction: column; /* Stack hero text and image */
+        align-items: center; /* Center content */
+        padding: 2em 1em; /* Reduce padding */
+    }
+
+    .hero-text {
+        max-width: 90%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+
+    .hero-image {
+        max-width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+        margin: 1em 0; /* Space between text and image */
+    }
+
+    .hero-btn {
+        padding: 0.8em 1.5em; /* Adjust button padding */
+        font-size: 1rem; /* Smaller button text */
+    }
+
+    #with-you-section {
+        flex-direction: column; /* Stack cards vertically */
+        padding: 2em 1em; /* Adjust padding */
+        margin: 2em 0; /* Adjust margin */
+    }
+
+    .image-card {
+        flex: 1 1 100%; /* Each card takes full width */
+        margin-bottom: 1em; /* Space between cards */
+    }
+
+    .quote {
+        font-size: 1.5rem; /* Smaller quote text */
+    }
+
+    .product-carousel {
+        flex-direction: column; /* Stack product cards vertically */
+        width: 100%;
+    }
+
+    .card-container {
+        display: block; /* Change to block layout for mobile */
+        width: 100%;
+    }
+
+    .product-card {
+        flex: 0 0 auto; /* Allow products to take full width */
+        margin: 1em 0; /* Space between product cards */
+        width: 100%;
+    }
+
+    
+
+    #email, #phoneNumber {
+        padding: 6px; /* Adjust padding */
+    }
+
+    .cta-button {
+        padding: 6px; /* Adjust button padding */
+    }
+
+    .features-section {
+        padding: 20px 10px; /* Adjust padding for features */
+    }
+
+    .features-section h2 {
+        font-size: 1.5rem; /* Smaller feature heading */
+    }
 }
-
-.hero-text {
-    max-width: 90%;
-    margin-bottom: 20px;
-}
-
-.hero-image {
-    max-width: 80%;
-    height: auto;
-    margin-top: 5em;
-}
-
-.hero-text {
-    max-width: 100%;
-    text-align: left;
-    margin: 2em;
-}
-
-h1 {
-    font-size: 2.4rem;
-    font-weight: 900;
-    margin: 1em 0;
-    color: var(--accent2-color);
-}
-
-p {
-    font-size: .9rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: var(--accent2-color);
-}
-
-.hero-btn {
-    display: inline-block;
-    padding: 1em 3em;
-    background-color: var(--primary-color);
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    margin: 0 auto 4em 0;
-}
-
-
 
 
 
