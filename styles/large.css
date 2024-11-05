@@ -202,7 +202,9 @@ h1 {
     line-height: 1em; /* Ensure consistent line height */
 }
 
-
+.hero-text p {
+    font-size: 1.2rem;
+}
 
 .animated-text {
     display: inline-block;
@@ -216,13 +218,15 @@ h1 {
 }
 
 
+
 /*------ SUPPORTING THOSE WHO STAND - SECTION --------*/
+
 
 #with-you-section {
     display: flex;
     flex-direction: row;
     gap: 2em;
-    padding: 10em 4em 4em 4em;
+    padding: 6em 4em 4em 4em;
     background: linear-gradient(180deg, #e0f7fa, rgb(70, 159, 154));
     flex-wrap: wrap;
     justify-content: center;
@@ -251,9 +255,9 @@ h1 {
   .overlay-text {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 2.5em;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 10px 15px;
     transition: opacity 0.3s ease;
   }
@@ -265,16 +269,18 @@ h1 {
   /* Quote Style */
   .quote {
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1.8rem;
     font-style: italic;
     text-align: center;
-    color: white;
-    margin-top: 20px;
-    padding: 10px;
-    background: rgb(45, 104, 101);
+    color: rgb(0, 62, 101);
+    margin-bottom: 2em;
+    padding: .5em;
+    
     border-left: 4px solid white;
-    order: 2; /* Makes sure quote comes below the images */
+    
   }
+
+  
   
   /* Fade-in Animation */
   .image-card {
@@ -711,7 +717,7 @@ h1 {
 }
 
 .testimonial p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 10px;
     color: white;
 }
