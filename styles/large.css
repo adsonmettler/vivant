@@ -525,7 +525,7 @@ h1 {
 }
 
 .features-section h2 {
-    margin: 2em 0 1em 0; /* Space between title and images */
+    margin: 2em 0 1.4em 0; /* Space between title and images */
     font-size: 3em; /* Adjust font size as needed */
     font-weight: 400;
     text-align: center;
