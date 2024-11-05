@@ -83,4 +83,27 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", handleScroll);
   });
   
-  
+
+
+//   FEATURES SECTION - Scroll animation
+
+document.addEventListener("DOMContentLoaded", () => {
+    const featureImages = document.querySelectorAll(".features-section .feature");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("fade-in");
+                    }, index * 200); // 200ms delay between each image
+                    observer.unobserve(entry.target); // Stop observing once it's faded in
+                }
+            });
+        },
+        { threshold: 0.1 } // Trigger when 10% of the image is visible
+    );
+
+    featureImages.forEach(image => observer.observe(image));
+});
+
