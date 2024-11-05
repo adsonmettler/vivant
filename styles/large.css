@@ -94,7 +94,7 @@ nav a.active-menu-link {
 }
 
 .search-field input {
-    padding: 0.5em 1em 0.5em 2.5em; /* Left padding to create space for icon */
+    padding: 0.7em 0 0.7em 2.5em; /* Left padding to create space for icon */
     border: 1px solid var(--secondary-color);
     border-radius: 20px;
     outline: none;
@@ -103,7 +103,7 @@ nav a.active-menu-link {
 
 .search-field .search-icon {
     position: absolute;
-    left: 10px;
+    left: .5em;
     color: var(--secondary-color);
     font-size: 1rem;
 }
