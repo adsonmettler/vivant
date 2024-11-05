@@ -531,7 +531,7 @@ h1 {
 }
 
 .features-section h2 {
-    margin: 2em 0 1.4em 0; /* Space between title and images */
+    margin: 1em 0 1.4em 0; /* Space between title and images */
     font-size: 3em; /* Adjust font size as needed */
     font-weight: 400;
     text-align: center;
@@ -598,18 +598,18 @@ h1 {
 }
 
 .style-functionality-section p {
-    font-size: .9rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
 }
 
 .style-functionality-section .cta-button {
-    padding: 0.75rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     background-color: rgb(0, 62, 101);
     color: var(--accent3-color);
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     text-decoration: none;
-    font-size: .9rem;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
