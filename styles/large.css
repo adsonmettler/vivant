@@ -108,9 +108,25 @@ nav a.active-menu-link {
 /*----------- HERO SECTION FOR LARGE SCREENS --------------*/
 
 
+
+/* CSS for fade-in effect */
+.hero-text, .hero-image {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(20px); /* Start slightly below */
+}
+
+.hero-text.fade-in, .hero-image.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+
+
+
 .hero-container {
     width: 100%;
-    margin: 4em auto 4em auto;
+    margin: 4em auto 0 auto;
     max-width: 1440px;
 }
 
@@ -119,7 +135,7 @@ nav a.active-menu-link {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 5em 10em;
+    padding: 5em 10em 0 10em;
     
     color: #333;
 }
@@ -173,6 +189,7 @@ nav a.active-menu-link {
     top: 90%;
     right: 90%;
     animation: spin 20s linear infinite; /* Adjust 3s to your preferred speed */
+    z-index: 9999;
 }
 
 
@@ -741,7 +758,7 @@ h1 {
 
 
 .partners-section {
-    padding: 10em 0;
+    padding: 5em 0 10em 0;
     text-align: center;
     background-color: #eaf6ff;
 }
@@ -864,6 +881,39 @@ h1 {
     padding: 1em;
     margin-top: 1em;
 }
+
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/* CSS for the fade-in effect */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 
 

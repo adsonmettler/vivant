@@ -107,3 +107,48 @@ document.addEventListener("DOMContentLoaded", () => {
     featureImages.forEach(image => observer.observe(image));
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("#with-you-section, .products-title, .product-carousel, #messageModal, .features-section, .style-functionality-section, .reviews-section, .partners-section");
+
+    // Add the initial fade-in class
+    sections.forEach(section => section.classList.add("fade-in-section"));
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in-visible");
+                observer.unobserve(entry.target); // Unobserve once it’s visible
+            }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => observer.observe(section));
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const heroText = document.querySelector(".hero-text");
+    const heroImage = document.querySelector(".hero-image");
+
+    function fadeInOnScroll(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+                observer.unobserve(entry.target); // Stop observing after fading in
+            }
+        });
+    }
+
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver(fadeInOnScroll, observerOptions);
+
+    // Observe only the hero text and hero image
+    observer.observe(heroText);
+    observer.observe(heroImage);
+});
