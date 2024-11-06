@@ -191,6 +191,17 @@ nav a.active-menu-link {
         margin-top: 1em; /* Add space above search field */
     }
 
+    .search-field {
+        display: flex;
+        align-items: center;
+    }
+    
+    .search-icon {
+        width: 20px; /* Adjust size as needed */
+        height: 20px;
+        opacity: 0.5;
+    }
+
     .search-field .search-icon {
         position: absolute;
         left: 5.5em;
