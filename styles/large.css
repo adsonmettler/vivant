@@ -889,8 +889,12 @@ h1 {
     font-size: 1.5rem;
 }
 
-.color-select, .size-select {
+.color-select {
     margin: 1em 0;
+}
+
+.size-select {
+    margin: 0 0 1em 0;
 }
 
 .shop-now-button {
