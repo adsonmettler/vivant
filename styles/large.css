@@ -108,6 +108,10 @@ nav a.active-menu-link {
     font-size: 1rem;
 }
 
+::placeholder {
+    font-size: 1rem;
+}
+
 .search-field {
     display: flex;
     align-items: center;
@@ -116,6 +120,7 @@ nav a.active-menu-link {
 .search-icon {
     width: 20px; /* Adjust size as needed */
     height: 20px;
+    opacity: 0.5;
 }
 
 
