@@ -97,7 +97,8 @@ nav a.active-menu-link {
     border: 1px solid var(--secondary-color);
     border-radius: 20px;
     outline: none;
-    color: var(--secondary-color);
+    color: black;
+    background-color: rgba(171, 235, 231, 0.5);
 }
 
 .search-field .search-icon {
@@ -106,6 +107,17 @@ nav a.active-menu-link {
     color: var(--secondary-color);
     font-size: 1rem;
 }
+
+.search-field {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+}
+
 
 /* Align search field within navigation links */
 .navigation-links .search-field {
