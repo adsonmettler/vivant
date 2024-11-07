@@ -373,7 +373,7 @@ h1 {
 .scroll-button {
     position: absolute;
     font-size: 2rem;
-    top: 45%;
+    top: 30%;
     transform: translateY(-50%); /* Center vertically */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -705,7 +705,7 @@ h1 {
 /* Main section container to hold title and testimonials */
 .reviews-section {
     max-width: 1920px;
-    margin: 4em auto;
+    margin: 4em auto 0 auto;
     padding: 20px;
     text-align: center;
     
@@ -933,19 +933,19 @@ h1 {
 }
 
 
-.reviews-section {
+.product-reviews-section {
     margin: 2em auto;
     max-width: 800px;
     text-align: center;
 }
 
-.reviews-section h2 {
+.product-reviews-section h2 {
     font-size: 2rem;
     margin-bottom: 1em;
     text-align: center;
 }
 
-.reviews-section .reviews-grid {
+.product-reviews-section .reviews-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns */
     gap: 1em;
