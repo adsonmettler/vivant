@@ -215,6 +215,51 @@ nav a.active-menu-link {
         padding: 0.7em 2.5em; /* Adjust padding */
     }
 
+
+/* ----- HERO SECTION ------*/
+
+
+/* CSS for fade-in effect */
+.hero-text, .hero-image {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(20px); /* Start slightly below */
+}
+
+.hero-text.fade-in, .hero-image.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+
+h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 4em 0 0 0;
+    color: var(--secondary-color);
+    line-height: 1em; /* Ensure consistent line height */
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin: 2em 0;
+}
+
+
+.hero-btn {
+    display: inline-block;
+    padding: .8em 3em;
+    background-color: var(--accent1-color);
+    color: var(--accent3-color);
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: box-shadow 0.3s ease;
+}
+
+
+
     .hero {
         flex-direction: column; /* Stack hero text and image */
         align-items: center; /* Center content */
@@ -222,7 +267,7 @@ nav a.active-menu-link {
     }
 
     .hero-text {
-        max-width: 90%; /* Full width for mobile */
+        max-width: 100%; /* Full width for mobile */
         text-align: center; /* Center text */
     }
 
@@ -237,6 +282,35 @@ nav a.active-menu-link {
         font-size: 1rem; /* Smaller button text */
     }
 
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+
+    .spin-image {
+        width: 200px;
+        position: absolute;
+        top: 80%;
+        right: 50%;
+        animation: spin 20s linear infinite; /* Adjust 3s to your preferred speed */
+        z-index: 9999;
+    }
+
+
+    .animated-text {
+        display: none;
+    }
+
+
+ /*------ SUPPORTING THOSE WHO STAND - SECTION --------*/
+
+
+
     #with-you-section {
         flex-direction: column; /* Stack cards vertically */
         padding: 2em 1em; /* Adjust padding */
@@ -244,47 +318,240 @@ nav a.active-menu-link {
     }
 
     .image-card {
-        flex: 1 1 100%; /* Each card takes full width */
+        display: none; /* Each card takes full width */
         margin-bottom: 1em; /* Space between cards */
     }
 
     .quote {
-        font-size: 1.5rem; /* Smaller quote text */
-    }
+    width: 100%;
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    color: rgb(0, 62, 101);
+    margin-bottom: 2em;
+    padding: .5em;
+    
+    border-left: 4px solid white;
+    
+  }
+
+
+
+
+/*----- BEST SELLERS SECTION -------*/
+
 
     .product-carousel {
-        flex-direction: column; /* Stack product cards vertically */
-        width: 100%;
-    }
-
-    .card-container {
-        display: block; /* Change to block layout for mobile */
-        width: 100%;
-    }
-
-    .product-card {
-        flex: 0 0 auto; /* Allow products to take full width */
-        margin: 1em 0; /* Space between product cards */
-        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden; /* Ensures scrolling is controlled */
     }
 
     
 
-    #email, #phoneNumber {
-        padding: 6px; /* Adjust padding */
+    .card-container {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto; /* Allows horizontal scrolling */
+        scroll-behavior: smooth;
+        width: 100%; /* Ensure it takes full width */
     }
+    
+    /* Scroll buttons styling */
+    .scroll-button {
+        position: absolute;
+        font-size: 2rem;
+        top: 30%;
+        transform: translateY(-50%); /* Center vertically */
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: .5em .2em;
+        cursor: pointer;
+        z-index: 1; /* Ensure it appears over other elements */
+        transition: color 0.3s;
+    }
+    
+    .scroll-button:hover {
+        color: rgb(70, 159, 154); /* Change to your desired hover color */
+    }
+    
+    /* Positioning the buttons */
+    #scrollLeft {
+        left: 0; /* Align to the left side */
+    }
+    
+    #scrollRight {
+        right: 0; /* Align to the right side */
+    }
+    
+    .products-title h1 {
+        width: 100%;
+        margin: 2em auto 0 2em;
+        font-weight: 400;
+    }
+    
+    #product-cards {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Snap effect */
+        gap: .1em; /* Add gap between cards */
+        padding: 1em 2em;
+        margin: 0em 0 8em 0;
+    }
+    
+    .product-card {
+        flex: 0 0 calc(80% - 16px); /* Show 3 full cards and half of the fourth card */
+        scroll-snap-align: center; /* Align card to the center when scrolling */
+        padding: 1em;
+        text-align: center;
+        margin: 1em 1em;
+    }
+    
+    .product-card img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    
+    .product-card h3 {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: .5em 0 0 0;
+    }
+    
+    .product-card p {
+        letter-spacing: .1rem;
+        margin: .5em 0;
+    }
+    
+    /* Hide scrollbar for a cleaner look */
+    #product-cards::-webkit-scrollbar {
+        display: none;
+    }
+    
 
-    .cta-button {
-        padding: 6px; /* Adjust button padding */
-    }
 
-    .features-section {
-        padding: 20px 10px; /* Adjust padding for features */
-    }
+    /*--------- MODAL ---------*/
+/* Modal general layout */
+    
 
-    .features-section h2 {
-        font-size: 1.5rem; /* Smaller feature heading */
+.modal {
+    display: none; /* Hidden by default; will be changed to 'flex' in JavaScript */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 10em auto;
+    max-width: 500px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modal layout */
+.modal-body {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+.modal-product-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.modal-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Text styling inside modal */
+.modal-text h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.modal-text p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Input fields styling */
+#email, #phoneNumber {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#phoneNumber {
+    flex: 2; /* smaller width for phone number input */
+}
+
+.cta-button {
+    flex: 1; /* Adjust button to align with phone number field */
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgb(0, 62, 101);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Small screen adjustments */
+@media (max-width: 500px) {
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
     }
+    .modal-product-image {
+        margin-bottom: 15px;
+    }
+}
+
+
+
 }
 
 
