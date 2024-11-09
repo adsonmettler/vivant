@@ -145,7 +145,7 @@ nav a.active-menu-link {
 
 
 /* Mobile Styles */
-@media (max-width: 500px) {
+@media (max-width: 999px) {
 
     html, body {
         max-width: 100%;
@@ -647,10 +647,12 @@ h1 {
 
 
 .style-functionality-section .image img {
-    width: 100%;
+    position: relative;
+    width: 370px;
     height: auto;
     border-radius: 8px;
-    margin: 2em auto 0 auto;
+    margin: 2em 0 0 0;
+    right: 25%;
 }
 
 
