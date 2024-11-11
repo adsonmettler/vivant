@@ -889,6 +889,90 @@ h1 {
     margin: 0 0 1em 0;
 }
 
+
+
+
+.color-select {
+    margin: 1em 0;
+}
+
+
+.color-select {
+    margin: 15px 0;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    border: 2px solid #000;
+}
+
+
+
+.size-select {
+    margin: 0 0 1em 0;
+}
+
+
+.size-select {
+    margin: 0 0 2em 0;
+}
+
+.size-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.size-option {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.size-option:hover {
+    transform: scale(1.1);
+    background-color: #ddd;
+}
+
+.size-option.selected {
+    background-color: #3e9ad1;
+    color: white;
+    border-color: #3e9ad1;
+}
+
+
+
+
+
+
+
+
+
 .shop-now-button {
     padding: 1em;
     margin: 2em 0;

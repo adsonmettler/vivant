@@ -141,9 +141,6 @@ productCardsContainer.addEventListener('scroll', () => {
 });
 
 
-
-
-
 // Create product cards on page load
 createProductCards();
 
@@ -153,3 +150,35 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+// PRODUCT IMAGE SELECTING FUCTION
+
+function changeColor(color) {
+    const mainImage = document.getElementById('mainProductImage');
+    const thumbnails = document.querySelectorAll('.thumbnail-images img');
+
+    if (color === 'blue') {
+        mainImage.src = 'images/vivant-blue-shoes-1.1.png';
+        thumbnails[0].src = 'images/vivant-blue-shoes-1.1.png';
+        thumbnails[1].src = 'images/vivant-blue-shoes-2.png';
+        thumbnails[2].src = 'images/vivant-blue-shoes-3.png';
+    } else if (color === 'black') {
+        mainImage.src = 'images/vivant-black-shoes-1.1.png';
+        thumbnails[0].src = 'images/vivant-black-shoes-1.1.png';
+        thumbnails[1].src = 'images/vivant-black-shoes-2.png';
+        thumbnails[2].src = 'images/vivant-black-shoes-3.png';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
