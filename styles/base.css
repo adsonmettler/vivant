@@ -331,7 +331,7 @@ h1 {
     .spin-image {
         width: 200px;
         position: absolute;
-        top: 80%;
+        top: 85%;
         right: 5%;
         animation: spin 20s linear infinite; /* Adjust 3s to your preferred speed */
         z-index: 99;
